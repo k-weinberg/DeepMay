@@ -1,0 +1,27 @@
+.wrapper {
+  overflow: hidden;
+}
+
+.sliding-background {
+  background: url("./media/darkness.webp");
+  height: 100vmin;
+  width: 5076px;
+  animation: slide 60s linear infinite;
+  z-index:0;
+}
+
+body {margin: 0}
+
+@keyframes slide{
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(-1692px, 0, 1000px);
+  }
+}
+
+.whitebar {
+    background-color: green; 
+    height:15vmin; 
+    opacity: 0.2;}
