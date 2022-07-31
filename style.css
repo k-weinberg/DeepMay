@@ -33,6 +33,7 @@ body {margin: 0}
   background-color: rgba(128, 128, 128, 0.5);
   color:lightgrey;
   font-size:0.9em;
+  /* font-family:Georgia */
   text-align:justify;
   z-index:1;
   position: absolute;
