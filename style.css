@@ -1,27 +1,110 @@
-.wrapper {
-  overflow: hidden;
-}
-
-.sliding-background {
-  background: url("./media/darkness.webp");
-  height: 100vmin;
-  width: 5076px;
-  animation: slide 60s linear infinite;
-  z-index:0;
-}
-
 body {margin: 0}
 
 @keyframes slide{
   0%{
-    transform: translate3d(0, 0, 0);
+    background-position: 0% 4%;
   }
   100%{
-    transform: translate3d(-1692px, 0, 1000px);
+    background-position: 5% 100%;
   }
+}
+
+
+@keyframes colorchange{
+  0%{background-color:#B7F0AD}
+  50%{background-color:#6bb30d}
+  100%{background-color:#B7F0AD}
+}
+@keyframes colorchange-border{
+  0%{border-color:#B7F0AD}
+  50%{border-color:#6bb30d}
+  100%{border-color:#B7F0AD}
+}
+@keyframes scootch{
+  0%{left:-10%}
+  100%{left:110%}
+}
+
+.wrapper {
+  position: relative;
+}
+
+.letter-k {font-size: 6em; 
+  font-weight: bolder; 
+  color: black;
+  margin: 0 auto;
+  font-family: sans-serif;
+  z-index:2;
+  -webkit-background-clip: text;
+	color: rgba(0,0,0,0.7);
+	background-image: url('./media/noise2.gif');}
+
+.initial {
+  /* background-image: url(./media/dancingman.gif); */
+  background-color:black;
+  background-size: auto 150%;
+  background-position: 25% 50%;
+  width: 100px;
+  height: 110px;
+  position: absolute;
+  left: 50%;
+  text-align: center;
+  vertical-align: middle; 
+  top: 10vmin;
+  z-index: 1;
+  transform: translateX(-50%);
+  transform: translate(-30%);
+  border-radius: 90px;
+  border-style:solid;
+  border-width:8px;
+  border-color: rgba(189, 189, 189, 0.1);
+  animation: colorchange-border 10s ease infinite
+}
+
+
+.marquee-wrapper {
+  overflow: hidden;
+  background-color:rgb(0,0,0);
+  z-index:1;
+}
+
+.sliding-background {
+  background: url("./media/darkness.png");
+  /* height: 100vmin; */
+  height: 100vmin;
+  width: 5076px;
+  animation: slide 100s linear infinite;
+  z-index: -1;
+}
+
+.gradient {
+  background-image:linear-gradient(rgba(0,0,0,0) 10%, black 90%); 
+  z-index:5;
+  height:100%;
+  width:100%;
 }
 
 .whitebar {
     background-color: green; 
-    height:15vmin; 
-    opacity: 0.2;}
+    height:2vmin; 
+    opacity: 0.8;
+    position: relative;
+    top: 20vmin;
+    animation: colorchange 10s ease infinite;
+}
+
+figcaption {
+  color:white; 
+  margin-top:10px;
+  font-size:1em;
+  white-space: nowrap; 
+}
+
+figure {  position:fixed;
+  bottom:0px;
+  animation: scootch 10s ease infinite;
+}
+
+img {
+  height:50px
+}
