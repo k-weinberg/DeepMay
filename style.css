@@ -32,7 +32,7 @@ body {margin: 0}
 .main-text-wrapper {
   background-color: rgba(128, 128, 128, 0.5);
   color:lightgrey;
-  font-size:0.9em;
+  font-size:0.8em;
   /* font-family:Georgia */
   text-align:justify;
   z-index:1;
