@@ -25,6 +25,18 @@ body {margin: 0}
   100%{left:110%}
 }
 
+@keyframes sceetch{
+  0%{right:-10%}
+  100%{right:110%}
+}
+
+h1 {margin:0}
+
+a:link {color:red;}
+a:hover {color:green;}
+a:visited {color:lightgreen;}
+a:active {color:white;}
+
 .main-text{
   padding:30px 20px 30px 20px;
 }
@@ -32,7 +44,7 @@ body {margin: 0}
 .main-text-wrapper {
   background-color: rgba(128, 128, 128, 0.5);
   color:lightgrey;
-  font-size:0.8em;
+  font-size:1em;
   /* font-family:Georgia */
   text-align:justify;
   z-index:1;
@@ -40,7 +52,7 @@ body {margin: 0}
   left:40%;
   right:20%;
   width:100%;
-  top:35%;
+  top:40%;
   transform:translateX(-40%);
 }
 
@@ -61,7 +73,8 @@ body {margin: 0}
   z-index:2;
   -webkit-background-clip: text;
 	color: rgba(0,0,0,0.7);
-	background-image: url('./media/noise2.gif');}
+	background-image: url('./media/noise2.gif');
+  user-select: none;}
 
 .initial {
   /* background-image: url(./media/dancingman.gif); */
@@ -95,7 +108,7 @@ body {margin: 0}
 .sliding-background {
   background: url("./media/darkness.png");
   /* height: 100vmin; */
-  height: 100vmin;
+  height: 150vh;
   width: 5076px;
   animation: slide 100s linear infinite;
   z-index: -1;
@@ -122,14 +135,30 @@ figcaption {
   margin-top:10px;
   font-size:1em;
   white-space: nowrap; 
+  user-select: none;
 }
 
-figure {  
+figure.information-animation  {  
   position:fixed;
   bottom:0px;
   animation: scootch 10s ease infinite;
+  user-select: none;
+}
+
+figure.landing-animation  {  
+  position:fixed;
+  bottom:0px;
+  animation: sceetch 10s ease infinite;
+  user-select: none;
 }
 
 img {
   height:50px
 }
+
+
+///
+
+/*Information Styling */
+
+.information p {color:white}
